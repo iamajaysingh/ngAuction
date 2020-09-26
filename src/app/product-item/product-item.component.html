@@ -1,0 +1,36 @@
+<!-- Card -->
+<div class="card">
+
+    <!-- Card image -->
+    <div class="view overlay">
+      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+  
+    <!-- Button -->
+    <a [routerLink]="['/products',product.id]" class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3"><i
+        class="fas fa-chevron-right pl-1"></i></a>
+  
+    <!-- Card content -->
+    <div class="card-body">
+  
+      <!-- Title -->
+      <h4 class="card-title">{{product.title}}</h4><span class="badge badge-info mb-2">{{product.price | currency}}</span>
+      <hr>
+      <!-- Text -->
+      <p class="card-text">{{product.description}}</p>
+  
+    </div>
+  
+    <!-- Card footer -->
+    <div class="rounded-bottom  lighten-3 text-center pt-3">
+          <!-- Rating -->
+          <ul class="rating">
+              <nga-stars [rating]="product.rating" [count]="5"></nga-stars> 
+        </ul>
+    </div>
+  
+  </div>
+  <!-- Card -->
